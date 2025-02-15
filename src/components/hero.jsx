@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react";
 import StatsBar from "./homepage/stats-bar";
 
 export default function Hero() {
@@ -20,9 +20,6 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-50 backdrop-blur-xl bg-[#212121]" />
       </div>
 
-
-
-
       {/* Content */}
       <div className="container relative z-10 flex h-full flex-col items-start justify-center ">
         <div className=" text-textPrimary min-h-[600px] flex items-center px-4">
@@ -32,12 +29,15 @@ export default function Hero() {
                 Eton College&apos;s student-run environmental publication
               </h2>
               <h1 className="text-[35px] md:text-[45px] font-bold leading-tight">
-                Stay Informed on the <span className="text-primary">Environment</span>
+                Stay Informed on the{" "}
+                <span className="text-primary">Environment</span>
                 <br />
-                <span className="text-primary">from Solutions</span> to Urgent Challenges
+                <span className="text-primary">from Solutions</span> to Urgent
+                Challenges
               </h1>
               <blockquote className="text-[15px] md:text-[20px] mt-6 italic">
-                &quot;I&apos;m sure things are going to get worse before they get better.
+                &quot;I&apos;m sure things are going to get worse before they
+                get better.
                 <br />
                 But I believe they can get better.&quot;
               </blockquote>
@@ -48,11 +48,10 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className="w-[770px] mx-auto translate-y-[150px]">
+        <div className="max-w-[770px] mx-auto translate-y-[150px]">
           <StatsBar />
         </div>
       </div>
-
     </div>
   );
 }

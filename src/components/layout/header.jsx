@@ -65,8 +65,7 @@ export function Header() {
         <div className="flex items-center gap-6">
           <Link href="/" className="items-center space-x-2">
             <span className="text-xl font-bold text-primary">
-            The 
-            Green Cloister
+              The Green Cloister
             </span>
           </Link>
         </div>
@@ -76,7 +75,13 @@ export function Header() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${isTop ? "text-white hover:bg-white/10 bg-transparent" : "text-black "} `}>
+                <NavigationMenuTrigger
+                  className={`${
+                    isTop
+                      ? "text-white hover:bg-white/10 bg-transparent"
+                      : "text-black "
+                  } `}
+                >
                   By Category
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -96,38 +101,60 @@ export function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <Button variant="ghost" className={`${isTop ? "text-white hover:bg-white/10" : "text-black "}`} asChild>
+          <Button
+            variant="ghost"
+            className={`${
+              isTop ? "text-white hover:bg-white/10" : "text-black "
+            }`}
+            asChild
+          >
             <Link href="/about">About Us</Link>
           </Button>
-          <Button variant="ghost" className={`${isTop ? "text-white hover:bg-white/10" : "text-black "}`} asChild>
+          <Button
+            variant="ghost"
+            className={`${
+              isTop ? "text-white hover:bg-white/10" : "text-black "
+            }`}
+            asChild
+          >
             <Link href="/contact">Contact Us</Link>
           </Button>
         </nav>
 
         {/* Right section with search and trending */}
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="text-white hover:bg-gray-100">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-gray-100"
+          >
             <Search className="h-5 w-5" />
             <span className="sr-only">Search</span>
-          </Button>
-          <Button variant="ghost" size="icon" className="text-white hover:bg-gray-100">
-            <Flame className="h-5 w-5" />
-            <span className="sr-only">Trending</span>
           </Button>
 
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-black hover:bg-gray-100 md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-black hover:bg-gray-100 md:hidden"
+              >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="top" className="h-screen w-full border-none bg-[#0D1222]">
+            <SheetContent
+              side="top"
+              className="h-screen w-full border-none bg-[#0D1222]"
+            >
               <SheetHeader>
                 <div className="flex justify-end">
                   <SheetTrigger asChild>
-                    <Button size="icon" className="bg-[#9ECEC5] hover:bg-[#8BBDB4]">
+                    <Button
+                      size="icon"
+                      className="bg-[#9ECEC5] hover:bg-[#8BBDB4]"
+                    >
                       <X className="h-5 w-5" />
                     </Button>
                   </SheetTrigger>
@@ -140,7 +167,11 @@ export function Header() {
                   onClick={() => setIsCategoryOpen(!isCategoryOpen)}
                 >
                   <span>By Category</span>
-                  <ChevronDown className={`h-5 w-5 text-white transition-transform ${isCategoryOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown
+                    className={`h-5 w-5 text-white transition-transform ${
+                      isCategoryOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
                 {isCategoryOpen && (
                   <div className="space-y-3 pl-4">
@@ -156,10 +187,16 @@ export function Header() {
                   </div>
                 )}
 
-                <Link href="/about" className="text-lg text-white hover:text-white/90">
+                <Link
+                  href="/about"
+                  className="text-lg text-white hover:text-white/90"
+                >
                   About Us
                 </Link>
-                <Link href="/contact" className="text-lg text-white hover:text-white/90">
+                <Link
+                  href="/contact"
+                  className="text-lg text-white hover:text-white/90"
+                >
                   Contact Us
                 </Link>
               </nav>

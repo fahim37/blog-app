@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "./ui/button";
@@ -9,42 +9,48 @@ const articles = [
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles and pastries, is a crucial ingredient in the human diet. An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment",
   },
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles andpastries, is a crucial ingredient in the human diet.An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment-2",
   },
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles andpastries, is a crucial ingredient in the human diet.An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment-3",
   },
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles andpastries, is a crucial ingredient in the human diet.An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment-4",
   },
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles andpastries, is a crucial ingredient in the human diet.An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment-5",
   },
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
     excerpt:
       "Wheat, used in our daily bread, pasta, noodles andpastries, is a crucial ingredient in the human diet.An increasing global population...",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCyJVMzSlKqHKICZ2NIptu6ciUpMTv.png",
     slug: "jeremy-clarkson-environment-6",
   },
 ];
@@ -77,14 +83,16 @@ export default function ArticlesGrid() {
               </div>
             </Link>
             <div className="flex flex-1 flex-col pt-5">
-
-
-              <Link href={`/article/${article.slug}`} className="group relative block w-fit">
+              <Link
+                href={`/article/${article.slug}`}
+                className="group relative block w-fit"
+              >
                 <h2
                   className="mb-3 text-[24px] font-medium leading-tight text-textPrimary hover:text-primary relative
                transition-all duration-300 ease-[cubic-bezier(0.785,0.135,0.15,0.86)] group-hover:bg-[length:100%_1px]"
                   style={{
-                    backgroundImage: "linear-gradient(to right, currentColor 0%, currentColor 100%)",
+                    backgroundImage:
+                      "linear-gradient(to right, currentColor 0%, currentColor 100%)",
                     backgroundSize: "0% 1px", // Start with no underline
                     backgroundPosition: "0 95%", // Position it close to the text
                     backgroundRepeat: "no-repeat",
@@ -93,9 +101,6 @@ export default function ArticlesGrid() {
                   {article.title}
                 </h2>
               </Link>
-
-
-
 
               <p className="line-clamp-3 text-sm leading-snug text-textPrimary">
                 {article.excerpt}
@@ -112,5 +117,3 @@ export default function ArticlesGrid() {
     </div>
   );
 }
-
-
