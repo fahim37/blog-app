@@ -1,57 +1,58 @@
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react"
+import StatsBar from "./homepage/stats-bar";
 
 export default function Hero() {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-[900px] w-full  mt-[-64px]">
       {/* Background Image */}
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Section-APfqI03zFSjIJ4fBROOZ9XB1iP4aJk.png"
+        src="/assets/homepage/hero.jpg"
         alt="Eton College buildings under a starry sky"
         fill
         priority
-        className="object-cover"
+        className="object-cover brightness-[0.6]"
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(33,33,33,0)40%,rgba(33,33,33,1)_80%)]">
+        <div className="absolute inset-x-0 bottom-0 h-50 backdrop-blur-xl bg-[#212121]" />
+      </div>
+
+
+
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-start justify-center px-6 md:px-12 lg:px-24">
-        <div className="max-w-2xl space-y-6">
-          {/* Logo */}
-          <h1 className="flex items-center text-6xl font-bold text-white md:text-7xl lg:text-8xl">
-            <span className="mr-2">the</span>
-            <span className="relative">
-              Fl
-              <span className="relative">
-                o{/* Globe in 'o' */}
-                <span className="absolute -left-0.5 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-emerald-400" />
-              </span>
-              rentina
-            </span>
-            {/* Fleur-de-lis */}
-            <span className="ml-2 text-teal-400">⚜</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg text-teal-100 md:text-xl">
-            Eton College&apos;s student-run environmental publication
-          </p>
-
-          {/* Quote */}
-          <blockquote className="space-y-2 border-l-4 border-teal-400 pl-4">
-            <p className="text-lg font-light text-white md:text-xl">
-              &quot;I&apos;m sure things are going to get worse before they get
-              better.
-              <br />
-              But I believe they can get better.&quot;
-            </p>
-            <cite className="text-sm text-teal-200">
-              Sir David Attenborough
-            </cite>
-          </blockquote>
+      <div className="container relative z-10 flex h-full flex-col items-start justify-center ">
+        <div className=" text-textPrimary min-h-[600px] flex items-center px-4">
+          <div className="max-w-[800px] space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-primary text-xl md:text-2xl font-normal">
+                Eton College&apos;s student-run environmental publication
+              </h2>
+              <h1 className="text-[35px] md:text-[45px] font-bold leading-tight">
+                Stay Informed on the <span className="text-primary">Environment</span>
+                <br />
+                <span className="text-primary">from Solutions</span> to Urgent Challenges
+              </h1>
+              <blockquote className="text-[15px] md:text-[20px] mt-6 italic">
+                &quot;I&apos;m sure things are going to get worse before they get better.
+                <br />
+                But I believe they can get better.&quot;
+              </blockquote>
+            </div>
+            <Button className="bg-primary text-textPrimary hover:bg-primary/90 text-lg px-6 py-6 h-[52px] w-[230px] rounded-[12px]">
+              Read Latest Article
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+        <div className="w-[770px] mx-auto translate-y-[150px]">
+          <StatsBar />
         </div>
       </div>
+
     </div>
   );
 }

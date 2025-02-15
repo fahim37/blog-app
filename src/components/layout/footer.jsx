@@ -1,148 +1,100 @@
-"use client";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Link from "next/link"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Facebook, Twitter, Youtube, Linkedin } from "lucide-react"
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Handle newsletter subscription
-    console.log("Subscribing:", { email, firstName });
-  };
-
   return (
-    <footer className="bg-slate-800 text-white py-12">
+    <footer className="bg-[#2F3437] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Newsletter Section */}
-          <div>
-            <h3 className="text-teal-300 text-sm font-semibold mb-4">
-              NEWSLETTER
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <Input
-                type="text"
-                placeholder="First name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                className="bg-white text-slate-900 w-full"
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-white text-slate-900 w-full"
-              />
-              <Button
-                type="submit"
-                className="w-full bg-teal-300 hover:bg-teal-400 text-slate-900"
-              >
-                Subscribe
-              </Button>
-            </form>
-          </div>
-
-          {/* Disclaimer Section */}
-          <div>
-            <h3 className="text-teal-300 text-sm font-semibold mb-4">
-              DISCLAIMER
-            </h3>
-            <p className="text-sm text-gray-300">
-              The views, thoughts, and opinions expressed on this site belong
-              solely to the author of the article, and not necessarily to the
-              author's school, employer, organisation, committee or any other
-              group or individual, including the members, editors or
-              administrators of the site.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Left Column */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-block">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rectangle%205-e1tOqrIiGCOBh9T5f6iiSxb6yqIqvK.png"
+                  alt="The Florentina Logo"
+                  className="h-12"
+                />
+              </div>
+            </Link>
+            <p className="text-gray-300 max-w-md">
+              Welcome to [College Name]&apos;s Student-Run Environmental Publication, a platform created and managed by
+              students passionate about protecting our planet. Our mission is to raise awareness about environmental
+              issues.
             </p>
+            <div className="flex gap-4">
+              <Link href="#" className="text-textPrimary hover:text-textPrimary-hover">
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-textPrimary hover:text-textPrimary-hover">
+                <Twitter className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="text-textPrimary hover:text-textPrimary-hover">
+                <Youtube className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="texttextPrimary hover:text-textPrimary-hover">
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
-          {/* Recent Posts Section */}
-          <div>
-            <h3 className="text-teal-300 text-sm font-semibold mb-4">
-              RECENT POSTS
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  Jeremy Clarkson: Diddly Squat for the Environment?
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  The Environmental Impact of War
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  Common Land in the UK
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-teal-300">
+          {/* Middle Columns */}
+          <div className="grid grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-primary font-medium">RECENT</h3>
+              <nav className="flex flex-col space-y-2">
+                <Link href="/" className="text-textPrimary hover:text-textPrimary-hover">
+                  HOME
+                </Link>
+                <Link href="/articles" className="text-textPrimary hover:text-textPrimary-hover">
+                  ARTICLES
+                </Link>
+                <Link href="/about" className="text-textPrimary hover:text-textPrimary-hover">
+                  ABOUT US
+                </Link>
+                <Link href="/contact" className="text-textPrimary hover:text-textPrimary-hover">
+                  CONTACT US
+                </Link>
+              </nav>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-primary font-medium">RECENT POSTS</h3>
+              <nav className="flex flex-col space-y-2">
+                <Link href="#" className="text-textPrimary hover:text-textPrimary-hover text-sm">
+                  Jeremy Clarkson: Diddly Squat the Environment?
+                </Link>
+                <Link href="#" className="text-textPrimary hover:text-textPrimary-hover text-sm">
+                  The Environmental Impact of Common Land in the UK
+                </Link>
+                <Link href="#" className="text-textPrimary hover:text-textPrimary-hover text-sm">
                   The Paris Olympics: How Sustainable Were They?
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  Why Nuclear Power Hasn't Taken Over the Energy Industry...
-                  Yet.
-                </a>
-              </li>
-            </ul>
+                </Link>
+                <Link href="#" className="text-textPrimary hover:text-textPrimary-hover text-sm">
+                  Why Nuclear Power Hasn&apos;t Taken Over the Energy Industry... Yet
+                </Link>
+              </nav>
+            </div>
           </div>
 
-          {/* Meta Section */}
-          <div>
-            <h3 className="text-teal-300 text-sm font-semibold mb-4">META</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  Log in
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-teal-300">
-                  Eton College
-                </a>
-              </li>
-            </ul>
+          {/* Right Column */}
+          <div className="space-y-4">
+            <h3 className="text-primary font-medium">NEWSLETTER</h3>
+            <form className="space-y-4">
+              <Input type="text" placeholder="First name" className="bg-white text-black" />
+              <Input type="email" placeholder="Email" className="bg-white text-black" />
+              <Button variant="custom" className="w-full bg-primary !text-textPrimary !text-bold hover:bg-primary/80">Subscribe</Button>
+            </form>
           </div>
         </div>
 
-        {/* Bottom Navigation */}
-        <nav className="mt-12 pt-8 border-t border-slate-700">
-          <ul className="flex justify-center space-x-8 mb-4">
-            <li>
-              <a href="#" className="hover:text-teal-300">
-                HOME
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-300">
-                ARTICLES
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-300">
-                ABOUT US
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-300">
-                CONTACT US
-              </a>
-            </li>
-          </ul>
-          <p className="text-center text-sm text-gray-400">
-            Copyright © 2024 | The Florentina
-          </p>
-        </nav>
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+          Copyright © 2025
+        </div>
       </div>
     </footer>
-  );
+  )
 }
+
