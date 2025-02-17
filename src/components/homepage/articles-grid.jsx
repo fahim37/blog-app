@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import HomePageHeading from "./shared/homepage-heading";
+import HomePageHeading from "../shared/homepage-heading";
 const articles = [
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
-import StatsBar from "./homepage/stats-bar";
+import StatsBar from "./stats-bar";
 
 export default function Hero() {
   return (
