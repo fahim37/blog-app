@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import HomePageHeading from "./shared/homepage-heading";
 const articles = [
   {
     title: "Jeremy Clarkson: Diddly Squat for the Environment?",
@@ -58,6 +59,7 @@ const articles = [
 export default function ArticlesGrid() {
   return (
     <div className="container mx-auto px-4 py-12">
+      <HomePageHeading text={"Archives"} />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <article

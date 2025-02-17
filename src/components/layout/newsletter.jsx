@@ -14,7 +14,7 @@ export default function Newsletter() {
   return (
     <div className=" bg-[#32373B] mb-[40px] lg:my-[80px]">
       <div className="container flex justify-between items-start py-10">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <h2 className="text-white text-2xl font-medium mb-2">
             Subscribe to our Newsletter
           </h2>
@@ -39,7 +39,7 @@ export default function Newsletter() {
             </button>
           </form>
         </div>
-        <div className="">
+        <div className="lg:mr-[100px]">
           <Image
             src="/assets/homepage/leaf.png"
             alt="Leaf decoration"
