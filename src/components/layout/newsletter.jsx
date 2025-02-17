@@ -43,9 +43,9 @@ export default function Newsletter() {
           <Image
             src="/assets/homepage/leaf.png"
             alt="Leaf decoration"
-            width={280}
-            height={190}
-            className="w-[280] h-[190] object-contain"
+            width={200}
+            height={200}
+            className="w-[200] h-[200] object-contain"
           />
         </div>
       </div>
