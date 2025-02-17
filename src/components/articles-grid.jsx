@@ -59,7 +59,20 @@ const articles = [
 export default function ArticlesGrid() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <HomePageHeading text={"Archives"} />
+      <div className="flex justify-between items-center">
+        <div />
+        <div className=" md:mr-[-100]">
+          <HomePageHeading text={"Archives"} />
+        </div>
+        <Link href="/all" className="mb-10 ">
+          <Button
+            variant="custom"
+            className=" text-primary underline hover:text-primary/80 text-[16px]"
+          >
+            See more
+          </Button>
+        </Link>
+      </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
           <article
