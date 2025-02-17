@@ -23,18 +23,18 @@ export default {
 			},
 			colors: {
 				primary: {
-					DEFAULT: "#22BF3F",
+					DEFAULT: "#2BAFFC",
 				},
 				secondary: {
 					DEFAULT: "#01080E",
 				},
 				textPrimary: {
-					DEFAULT: "#FFFFFF", 
-					hover:"#53AC9F"
+					DEFAULT: "#FFFFFF",
+					hover: "#53AC9F"
 				},
-				
-				textSecondary:{
-					DEFAULT: "#000000", 
+
+				textSecondary: {
+					DEFAULT: "#000000",
 				}
 			},
 		}
